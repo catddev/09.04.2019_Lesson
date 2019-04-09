@@ -50,3 +50,10 @@ bool tree::operator>(double l)
 {
 	return life_length > l;
 }
+
+tree tree::operator+(double ll)
+{
+	this->life_length += ll;
+	this->height += ll * 0.5;
+	return *this;
+}

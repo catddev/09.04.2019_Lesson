@@ -24,4 +24,5 @@ public:
 	bool operator==(tree obj);
 	bool operator>(tree obj);
 	bool operator>(double l);
+	tree operator + (double ll);
 };
