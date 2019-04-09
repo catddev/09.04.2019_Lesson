@@ -37,6 +37,15 @@ tree & Vector::operator[](int index)
 	return ts[index];
 }
 
+Vector Vector::operator=(const Vector & obj)
+{
+	cur_size = buf_size = obj.cur_size;
+	ts = new tree[buf_size];
+	for (int i = 0; i < buf_size; i++)
+		ts[i] = obj.ts[i];
+	return *this; //возвращает текущий объект, т.к. изменения идут в нем
+}
+
 void Vector::add(tree obj)
 {
 	if (buf_size == 0) {

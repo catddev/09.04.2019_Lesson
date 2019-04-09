@@ -17,7 +17,7 @@ int main() {
 	if (t1 > 8) cout << "lives longer" << endl;
 
 	//здесь без конструктора копирования
-	//вообще конструктор копирования и деструктор и перегрузки нужны для работы только с динамической памятью!
+	//вообще конструктор копирования, присваивания и деструктор нужны для работы только с динамической памятью!
 	tree t3;
 	t3 = t1;
 	if (t1 == t3) cout << "equal" << endl;
@@ -32,8 +32,29 @@ int main() {
 	for (int i = 0; i < v.size(); i++) //метод size() вернет cur_size;
 		v[i].print();
 
+	ifstream in_file("in.txt");
+	double tmp;
+	tree t;
 
+	while (!in_file.eof()) {
+		in_file >> tmp;
+		t.setHeight(tmp);
+		in_file >> tmp;
+		t.setLifeLength(tmp);
+		v.add(t);
+	}
+	cout << "from file" << endl;
+	for (int i = 0; i < v.size(); i++)
+		v[i].print();
+	cout << endl;
 
+	Vector tv;
+	tv = v;
+	for (int i = 0; i < tv.size(); i++)
+		tv[i].print();
+	cout << endl;
+
+	if (v[0] == v[1]) cout << "equal" << endl;
 
 	system("pause");
 	return 0;

@@ -12,5 +12,6 @@ public:
 	~Vector();
 	int size();
 	tree& operator[](int index);
+	Vector operator=(const Vector&obj); //явно прописываем оператор присваивания для точного копирования векторов
 	void add(tree obj);
 };
