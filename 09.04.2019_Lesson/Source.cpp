@@ -33,15 +33,12 @@ int main() {
 		v[i].print();
 
 	ifstream in_file("in.txt");
-	double tmp;
-	tree t;
+	double tmp1, tmp2;
 
 	while (!in_file.eof()) {
-		in_file >> tmp;
-		t.setHeight(tmp);
-		in_file >> tmp;
-		t.setLifeLength(tmp);
-		v.add(t);
+		in_file >> tmp1 >> tmp2;
+		v.add(tree(tmp1, tmp2)); //не через сеттеры, а сразу через параметризованный конструктор
+		//каждый раз создается новый tree, вместо записи во временный объект класса как раньше
 	}
 	cout << "from file" << endl;
 	for (int i = 0; i < v.size(); i++)
