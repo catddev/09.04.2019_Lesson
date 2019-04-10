@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include"tree.h"
 class Vector {
 private:
@@ -12,6 +12,6 @@ public:
 	~Vector();
 	int size();
 	tree& operator[](int index);
-	Vector operator=(const Vector&obj); //явно прописываем оператор присваивания для точного копирования векторов
+	Vector operator=(const Vector&obj); //СЏРІРЅРѕ РїСЂРѕРїРёСЃС‹РІР°РµРј РѕРїРµСЂР°С‚РѕСЂ РїСЂРёСЃРІР°РёРІР°РЅРёСЏ РґР»СЏ С‚РѕС‡РЅРѕРіРѕ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РІРµРєС‚РѕСЂРѕРІ
 	void add(tree obj);
 };

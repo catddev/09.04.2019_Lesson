@@ -1,4 +1,4 @@
-#include "Vector.h"
+ï»¿#include "Vector.h"
 
 Vector::Vector()
 {
@@ -43,7 +43,7 @@ Vector Vector::operator=(const Vector & obj)
 	ts = new tree[buf_size];
 	for (int i = 0; i < buf_size; i++)
 		ts[i] = obj.ts[i];
-	return *this; //âîçâðàùàåò òåêóùèé îáúåêò, ò.ê. èçìåíåíèÿ èäóò â íåì
+	return *this; //Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ñ‚ÐµÐºÑƒÑ‰Ð¸Ð¹ Ð¾Ð±ÑŠÐµÐºÑ‚, Ñ‚.Ðº. Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ Ð¸Ð´ÑƒÑ‚ Ð² Ð½ÐµÐ¼
 }
 
 void Vector::add(tree obj)
