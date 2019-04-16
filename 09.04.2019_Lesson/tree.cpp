@@ -57,3 +57,16 @@ tree tree::operator+(double ll)
 	this->height += ll * 0.5;
 	return *this;
 }
+
+istream & operator>>(istream & is, tree & obj)
+{
+	is >> obj.height >> obj.life_length;
+	return is;
+}
+
+ostream & operator<<(ostream & os, tree obj)
+{
+	os << "Tree height: " << obj.height << " "
+		<< "Tree life length: " << obj.life_length << endl;
+	return os;
+}
